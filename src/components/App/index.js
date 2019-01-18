@@ -1,8 +1,8 @@
 import React from "react";
 
 const App = () => (
-  <div>
-    <h1>React with Firebase Try Out App</h1>
+  <div className="card-panel">
+    <h4 className="blue-text text-darken-2">React with Firebase Try Out App</h4>
   </div>
 );
 
