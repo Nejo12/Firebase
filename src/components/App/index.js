@@ -1,9 +1,34 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navigation from "../Navigation";
+import LandingPage from "../Landing";
+import SignUpPage from "../SignUp";
+import SignInPage from "../SignIn";
+import PasswordForgetPage from "../PasswordForget";
+import HomePage from "../Home";
+import AccountPage from "../Account";
+import AdminPage from "../Admin";
+
+/* import * as ROUTES from "../../constants/routes"; */
 
 const App = () => (
-  <div className="card-panel">
-    <h4 className="blue-text text-darken-2">React with Firebase Try Out App</h4>
-  </div>
+  <Router>
+    <div>
+      {/* Navigation components stays independently fixed off any route change. */}
+      <Navigation />
+      <hr />
+      {/* All routes below are matched to corresponding path prop. The respective
+      components with thereby be displayed when clicked from navbar. */}
+
+      <Route exact path="ROUTES.LANDING" component={LandingPage} />
+      <Route path="ROUTES.SIGN_UP" component={SignUpPage} />
+      <Route path="ROUTES.SIGN_IN" component={SignInPage} />
+      <Route path="ROUTES.PASSWORD_FORGET" component={PasswordForgetPage} />
+      <Route path="ROUTES.HOME" component={HomePage} />
+      <Route path="ROUTES.ACCOUNT" component={AccountPage} />
+      <Route path="ROUTES.ADMIN" component={AdminPage} />
+    </div>
+  </Router>
 );
 
 export default App;
