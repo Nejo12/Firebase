@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const Landing = () => (
-  <div>
-    <h1>Landing</h1>
+  <div className="landingPage">
+    <h4>Landing Page without Styles, yet.</h4>
   </div>
 );
 

@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import * as serviceWorker from './serviceWorker';
 
-import App from "./components/App";
-import Firebase, { FirebaseContext } from "./components/Firebase";
+import App from './components/App';
+import Firebase, { FirebaseContext } from './components/Firebase';
 
 // This ensures that Firebase is instatiated only once and induced through React's Context API to React's component tree. Every component with interst in using Firebase now has access to the Firebase instance with a 'FirebaseContect.Consumer' components
 
@@ -12,7 +12,7 @@ ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <App />
   </FirebaseContext.Provider>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
